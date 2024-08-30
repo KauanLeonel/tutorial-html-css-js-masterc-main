@@ -1,0 +1,38 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} 
+body {
+    background-color: rgb(34, 32, 32);
+}
+header {
+    height:90px;
+    background-color: black;
+}
+
+.wrapper {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#logo {
+    width: 150px;
+}
+
+nav {
+    width: 450px;
+    height: 50px;
+    background-color: rgb(0, 255, 85);
+}
+
+#logo h1 {
+    margin: 0px;
+    color: white;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
