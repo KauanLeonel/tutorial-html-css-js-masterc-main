@@ -30,6 +30,15 @@
         <main>
             <div class="wrapper">
                 <h1>Quem somos</h1>
+                <input type="text" id="cortexto">
+                <button onclick="MudarCor()"> Enviar</button>
+                <div id = "Cor"> </div>
+                <script>
+                    function MudarCor(){
+                        const cortexto = document.getElementById('cortexto')
+                        Cor.style.background = document.getElementById('cortexto').value
+                    }
+                </script>
             </div>
         </main>
     </body>

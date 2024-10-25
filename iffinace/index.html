@@ -11,10 +11,28 @@
             let idade = 40;
             const pi = 3.14;
             const idAdmins = [1,5,10,80]
+            //const nomeCompleto = nome + " " + sobrenome
+
+            function nomeCompleto (nome, sobrenome){
+                return `${nome} ${sobrenome}`
+            }
+
+            const nCompleto = function(nome, sobrenome){
+                return`${nome} ${sobrenome} `
+            }
+
+            const nmCompleto = (nome, sobrenome) => {
+            return`${nome} ${sobrenome} `
+            }
+
             const user = {
                 id: 10,
                 nome: "Paulo",
-                email : "paulo@gmail.com"
+                sobrenome: "Matias",
+                email : "paulo@gmail.com",
+                nomeCompleto: (nome, sobrenome) => {
+                    return `${nome} ${sobrenome}`
+                }
             }
             const user2 = {
                 id: 20,
@@ -27,6 +45,7 @@
                 email : "arthur@gmail.com"
             }
             const usuario = [user, user2, user3]
+             console.log (`Ola ${nomeCompleto(user.nome, user.sobrenome)}, seja bem-vindo`)
             console.log (`Ola ${usuario[0].id}, seja bem-vindo`)
             console.log (`Ola ${usuario[0].nome}, seja bem-vindo`)
             console.log (`Ola ${usuario[0].email}, seja bem-vindo`)
@@ -63,7 +82,45 @@
         <main>
             <div class="wrapper">
                 <h1>Home</h1>
+
+                <input type="text" id= "txtinput">
+
+                <button onclick="mudar()"> TESTE</button>
+                <button onclick="pegarTexto()"> PEGAR TEXTO</button>
+
+                <div id="resultado"></div>
             </div>
         </main>
     </body>
+    <script>
+        const logo = document.getElementById('logo')
+        console.log ("AAAAAA")
+        console.log (logo)
+        //logo.style.backgroundColor = "#FFF"
+        //logo.innerHTML = '<p>NovoLogo'
+        //logo.innerHTML += '<p>Novo LOGO'
+            let coratual = 'preto'
+        const mudar = () => {
+            const logo = document.getElementById('logo')
+            const logocolor = logo.style.background
+            if (coratual === 'preto'){
+                logo.style.backgroundColor = "#FFF"
+                coratual = "branco"
+            }
+            else{
+                logo.style.backgroundColor = "#000"
+                coratual = "preto"
+            }
+            //logo.style.backgroundColor = "#FFF"
+            console.log ('Clicado...')
+        }
+
+        function pegarTexto (){
+            const txtinput = document.getElementById('txtinput')
+            const resultado= document.getElementById('resultado')
+
+            resultado.innerHTML = `<p>${txtinput.value}<p>` 
+
+        }
+    </script>
 </html>

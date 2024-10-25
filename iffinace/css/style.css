@@ -17,7 +17,11 @@ header {
     margin: 0 auto;
     color: #fff;
 }
-
+#Cor {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+}
 #logo {
     width: 150px;
 }
